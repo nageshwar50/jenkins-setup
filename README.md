@@ -1,4 +1,6 @@
 # Jenkins Installation On Ubuntu with Reverse Proxy & TLS Certificate and Integration with Slack
+![image](https://github.com/nageshwar50/jenkins-setup/assets/128671109/ce877836-0a4e-44c0-83b5-8052f106e9ab)
+
 
 This repository provides an overview and step-by-step guide for installing Jenkins on Ubuntu with a reverse proxy and TLS certificate. Additionally, it covers the integration of Jenkins with Slack for increased visibility into Jenkins job statuses.
 
