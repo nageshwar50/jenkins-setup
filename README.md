@@ -24,8 +24,7 @@ Transport Layer Security (TLS) is a cryptographic protocol that ensures secure c
 *  Trust
 
 
-terraform init
-terraform apply -var-file=ec2.tfvars -var-file=terraform.tfvars
+
 ## Provision Server Using Terraform
 Modify the values of ec2.tfvars file present in the terraform-aws/vars folder. You need to replace the values highlighted in bold with values relevant to your AWS account & region.
 
@@ -37,7 +36,7 @@ ami_id         = "ami-06873c81b882339ac"
 instance_type  = "t2.micro"
 key_name       = "pandey"
 instance_count = 1
-volume_size    = 20
+volume_size    = 25
 
 # VPC id
 vpc_id  = "vpc-0cac018cd52b8d4c1"
@@ -62,8 +61,8 @@ terraform validate
 </pre>
 Execute the plan and apply the changes.
 <pre>
-terraform plan
-terraform apply
+terraform plan --var-file=../vars/ec2.tfvars
+terraform apply --var-file=../vars/ec2.tfvars
 </pre>
 
 Before typing ‘yes‘ make sure the desired resources are being created.
