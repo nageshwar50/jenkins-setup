@@ -31,16 +31,16 @@ Modify the values of ec2.tfvars file present in the terraform-aws/vars folder. Y
 If you are using ca-central-1, you can continue with the same AMI id.
 <pre>
 # EC2 Instance Variables
-region         = "ca-central-1"
-ami_id         = "ami-06873c81b882339ac"
+region         = "us-west-2"
+ami_id         = "ami-0efcece6bed30fd98"
 instance_type  = "t2.micro"
-key_name       = "pandey"
+key_name       = "nageshwar"
 instance_count = 1
-volume_size    = 25
+volume-size = 25
 
 # VPC id
-vpc_id  = "vpc-0cac018cd52b8d4c1"
-subnet_ids     = ["subnet-0974592fab983deaf"]
+vpc_id  = "vpc-0ce1c1c34c9d1afe2"
+subnet_ids     = ["subnet-02da9422af0bbc93c"]
 
 # Ec2 Tags
 name        = "jenkins-stack"
@@ -86,7 +86,6 @@ Changes to Outputs:
 
 </pre>
 ![image](https://github.com/nageshwar50/jenkins-setup/assets/128671109/f204dd13-9edb-4501-aa49-8541b0772d03)
-
 
 Now we can connect to the AWS EC2 machine just created using the public IP. Replace the key path/name and IP accordingly.
 <pre>  ssh -i pandey.pem ubuntu@34.216.95.97</pre>
